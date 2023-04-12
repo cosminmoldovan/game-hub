@@ -7,12 +7,12 @@ import { Genre } from "../hooks/useGenres";
 import PlatformIconList from "./PlatformIconList";
 import PlatformSelector from "./PlatformSelector";
 import { Platform } from "../hooks/usePlatforms";
+import { GameQuery } from "../App";
 interface Props {
-  selectedGenre: Genre | null;
-  selectedPltform: Platform | null;
+  gameQuery: GameQuery;
 }
-const GameGrid = ({selectedGenre, selectedPltform}:Props) => {
-  const { data, error, isLoading } = useGames(selectedGenre, selectedPltform);
+const GameGrid = ({gameQuery}:Props) => {
+  const { data, error, isLoading } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
   return (
     <>
