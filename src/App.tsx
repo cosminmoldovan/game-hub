@@ -11,17 +11,20 @@ function App() {
           base: `"nav" "main"`,
           lg: `"nav nav" "aside main"`, // large screen > 1024
         }}
-        gap="1"
+        gridTemplateColumns={{
+          base: '1fr',
+          lg: '200px 1fr'
+        }}
       >
-        <GridItem area={"nav"}>
+        <GridItem area={"nav"} px={6}>
           <NavBar></NavBar>
         </GridItem>
         <Show above="lg">
-          <GridItem bg="blue.300" area={"aside"}>
+          <GridItem area={"aside"} px={6}>
             <GenreList />
           </GridItem>
         </Show>
-        <GridItem bg="green.300" area={"main"}>
+        <GridItem area={"main"}>
           <GameGrid />
         </GridItem>
       </Grid>
