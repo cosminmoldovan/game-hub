@@ -6,11 +6,13 @@ import GameCardContainer from "./GameCardContainer";
 import { Genre } from "../hooks/useGenres";
 import PlatformIconList from "./PlatformIconList";
 import PlatformSelector from "./PlatformSelector";
-interface Props{
+import { Platform } from "../hooks/usePlatforms";
+interface Props {
   selectedGenre: Genre | null;
+  selectedPltform: Platform | null;
 }
-const GameGrid = ({selectedGenre}:Props) => {
-  const { data, error, isLoading } = useGames(selectedGenre);
+const GameGrid = ({selectedGenre, selectedPltform}:Props) => {
+  const { data, error, isLoading } = useGames(selectedGenre, selectedPltform);
   const skeletons = [1, 2, 3, 4, 5, 6];
   return (
     <>
