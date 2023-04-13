@@ -3,13 +3,15 @@ import logo from "../assets/logo.svg";
 import logoDark from "../assets/logo-dark.svg";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
-
-const NavBar = () => {
+interface Props{
+  onSearch: (searchText: string) => void;
+}
+const NavBar = ({onSearch}: Props) => {
   const { colorMode } = useColorMode();
   return (
     <HStack py="25px" mb={30}>
       <Image src={colorMode === "dark" ? logo : logoDark} boxSize={"40px"}/>
-      <SearchInput />
+      <SearchInput onSearch={onSearch}/>
       <ColorModeSwitch />
     </HStack>
   );
