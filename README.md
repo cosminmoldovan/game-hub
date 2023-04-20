@@ -3,7 +3,6 @@
 <h3>About</h3>
 <p> GameHub is a video game discovery web application that helps you find new and exciting games to play. Thanks to data fetching and filtering functions, you can search for games by platform, genre and more.<p/>
 <h3>Technologies</h3>
-<p>
 <code>react</code>
 <code>typescript</code>
 <code>video-games-api</code>
@@ -11,4 +10,3 @@
 <code>custom-data-fetching</code>
 <code>filtering-and-searching</code>
 <code>dark-mode</code>
-<p/>
